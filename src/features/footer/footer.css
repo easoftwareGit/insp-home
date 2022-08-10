@@ -1,0 +1,21 @@
+#footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#quote {
+  padding-bottom: 10px;
+  font-size: 125%;
+  font-style: italic;
+  font-weight: bold;
+
+  /* background-color: rgb(181, 222, 176); */
+}
+
+/* #source {
+  background-color: antiquewhite;
+} */

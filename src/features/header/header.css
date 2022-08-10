@@ -1,0 +1,46 @@
+#headerContainer {  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 0px;
+  height: 64px;
+  
+  /* background-color: lightgoldenrodyellow; */
+}
+
+.headerBox {
+  width: 120px; 
+  margin: 0px 2px;
+
+  /* background-color: teal; */
+} 
+
+#weatherImageBox {
+  text-align: right;  
+
+  /* background-color: rgb(218, 72, 255); */
+} 
+
+/* #weatherImage {  
+
+  background-color: rgb(0, 85, 85);
+} */
+
+/* 
+#weatherTempText {  
+  background-color: lightseagreen;
+} */
+
+#weatherTemp {
+  margin-top: -15px;
+  margin-bottom: -20px;
+  font-size: 150%;
+  font-weight: bold;
+
+  /* background-color: lavender; */
+}
+
+/* #weatherCurrent {
+
+  background-color: rgb(255, 182, 239);
+}  */
