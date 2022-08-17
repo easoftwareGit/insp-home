@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/src/images/backgrounds
 
 # production
 /build

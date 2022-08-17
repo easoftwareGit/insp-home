@@ -15,3 +15,19 @@
   transform: scale(1.5);  
   filter: brightness(0.5) blur(5px);
 }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* background-color: rgb(93, 198, 233); */
+}
+
+.arrowButton {
+  font-size: 300%;
+  font-weight: bold;
+  cursor: pointer;  
+  border: none; 
+  background: transparent;
+}
