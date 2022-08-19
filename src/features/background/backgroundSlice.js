@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import { createSlice, isAsyncThunkAction } from "@reduxjs/toolkit";
-import { allBGImages } from "./localdata";
+import { allBGImages } from "./localBackgrounds";
 
 export const backgroundImageSlice = createSlice({
   name: 'backgroundImage',
