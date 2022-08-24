@@ -12,8 +12,8 @@ export const weatherSlice = createSlice({
     description: 'Sunny'
   },
   reducers: {
-    getWeather: (state) => {      
-      state.imageIndex = Math.floor(Math.random() * 9);
+    getWeather: (state) => {  
+      state.imageIndex = Math.floor(Math.random() * (state.images.length));       
       switch (state.imageIndex) {
         case 0:
           state.temperature = '82.0';

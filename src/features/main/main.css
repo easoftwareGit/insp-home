@@ -53,12 +53,12 @@
   position: relative;
 }
 
-.item-blue {
-  background-color: rgba(46, 119, 255, 0.2);
+.item-berkelyBlue {
+  background-color: rgba(0, 50, 98, 0.2);
 }
 
-.item-red {
-  background-color: rgba(255, 88, 88, 0.2);
+.item-californiaGold {
+  background-color: rgba(253, 181, 21, 0.2);
 }
 
 .itemActionsContainer {
@@ -66,12 +66,18 @@
   top: -10px;  
   right: -10px;
   display: flex;
+  opacity: 0;  
 }
 
 .itemAction {
   border: 1px solid rgba(255, 255, 255, 0.20);
   border-radius: 10px;  
   margin-left: 6px;  
+  cursor: pointer;
+}
+
+.itemStyle:hover .itemActionsContainer {
+  opacity: 1;  
 }
 
 .remove {
@@ -79,5 +85,5 @@
 }
 
 .done {
-  background-color: rgba(48, 128, 48, 0.20);
+  background-color: rgba(48, 128, 48, 0.2);
 }

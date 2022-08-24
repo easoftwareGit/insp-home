@@ -11,7 +11,7 @@ export const footerSlice = createSlice({
   },
   reducers: {
     getQuote: (state) => {
-      const index = Math.floor(Math.random() * (allQuotes.length+1));
+      const index = Math.floor(Math.random() * (allQuotes.length));
       state.quote = allQuotes[index].quote;
       state.source = allQuotes[index].source;
     }
