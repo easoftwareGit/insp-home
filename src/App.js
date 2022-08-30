@@ -5,7 +5,8 @@ import { NextImageButton } from './features/background/nextImageButton';
 import { PrevImageButton } from './features/background/prevImageButton';
 import { Weather } from './features/weather/weather';
 // import { Header } from './features/header/header';
-import { Main } from './features/main/main';
+// import { Main } from './features/main/main';
+import { ToDo } from './features/main/toDo';
 import { Footer } from './features/footer/footer';
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       </header>      
       <PrevImageButton/>
       <main className='App-main'>
-        <Main/>
+        {/* <Main/> */}
+        <ToDo/>
       </main>      
       <NextImageButton/>
       <footer className='App-footer'>

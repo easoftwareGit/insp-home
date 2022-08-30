@@ -12,10 +12,12 @@ export const toDoSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      state.items.push({ text: action.payload.text, isDone: false });
+      // action.payload has text of item to add
+      state.items.push({ text: action.payload, isDone: false });
     },
     removeItem: (state, action) => {
-      state.items.splice(action.payload, 1); // action.payload has index of item to remove
+      // action.payload has index of item to remove
+      state.items.splice(action.payload, 1); 
     }, 
     toggleItemDone: (state, action) => {
       // action.payload has index of item to toggle isDone value

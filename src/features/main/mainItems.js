@@ -1,7 +1,7 @@
 import React from "react";
-import { ToDoItem } from "./toDoItem";
+import { MainItem } from "./mainItem";
 
-export function ToDoItems({ items }) {
+export const MainItems = ({ items }) => {
 
   const toDoColors = [
     "berkelyBlue",
@@ -18,11 +18,11 @@ export function ToDoItems({ items }) {
             key={text}
             className={`item-${getToDoColor(index)} itemStyle`}                
           >
-            <ToDoItem id={index} isDone={isDone} />
-            {text}            
+            <MainItem id={index} isDone={isDone}/>
+            {text}
           </li>
         ))}
-      </ul>
-    </div>
-  )
-}
+      </ul>          
+    </div>    
+  );
+};

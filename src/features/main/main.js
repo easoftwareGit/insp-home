@@ -1,11 +1,12 @@
 import React from "react";
-import { MainItem } from "./mainItem";
+// import { MainItem } from "./mainItem";
+import { MainItems } from "./mainItems";
 import './main.css';
 
-const toDoColors = [
-  "berkelyBlue",
-  "californiaGold"
-];
+// const toDoColors = [
+//   "berkelyBlue",
+//   "californiaGold"
+// ];
 
 const mainToDoItems = [
   { text: "To do #1", isDone: false },
@@ -13,7 +14,7 @@ const mainToDoItems = [
   { text: "Just another test", isDone: false },
 ]
 
-const getToDoColor = (index) => toDoColors[index % toDoColors.length];
+// const getToDoColor = (index) => toDoColors[index % toDoColors.length];
 
 export class Main extends React.Component {
   constructor(props) {
@@ -50,7 +51,10 @@ export class Main extends React.Component {
             />            
           </form>
         </div>
-        <div id="currentItems" className="toDoContainer">
+        <MainItems items={mainToDoItems} />
+
+
+        {/* <div id="currentItems" className="toDoContainer">
           <ul id="itemsList">
             {mainToDoItems.map(({ text, isDone }, index) => (
               <li
@@ -61,30 +65,10 @@ export class Main extends React.Component {
                 {text}
               </li>
             ))}
-
-
-            {/* <li className={`item-${getToDoColor(0)} itemStyle`}>              
-              <div className="toDoItem">
-                <div className="itemActionsContainer">
-                  <button className="itemAction remove">Remove</button>
-                  <button className="itemAction done">Done</button>
-                </div>
-                To Do #1
-              </div>
-            </li>
-            <li className={`item-${getToDoColor(1)} itemStyle`}>              
-              <div className="toDoItem">
-                <div className="itemActionsContainer">
-                  <button className="itemAction remove">Remove</button>
-                  <button className="itemAction done">Done</button>
-                </div>
-                To Do item # two 
-              </div>
-            </li> */}
-
-
           </ul>          
-        </div>
+        </div> */}
+
+
       </div>
     )
   }  

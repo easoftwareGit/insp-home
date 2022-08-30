@@ -1,0 +1,89 @@
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.toDoContainer {
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 10px;
+  padding: 20px 20px;
+  width: 90%;
+  margin-bottom: 20px;
+
+  /* background-color: lightseagreen; */
+}
+
+#newItemTitle {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+#newItemInput {
+  width: 100%;  
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid black;
+  font-size: 2.0em;
+  outline: none;
+  text-align: center;
+}
+
+#itemsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#itemsList > * {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.itemStyle {
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;  
+  padding: 1em;
+  position: relative;
+}
+
+.item-berkelyBlue {
+  background-color: rgba(0, 50, 98, 0.2);
+}
+
+.item-californiaGold {
+  background-color: rgba(253, 181, 21, 0.2);
+}
+
+.itemActionsContainer {
+  position: absolute;
+  top: -10px;  
+  right: -10px;
+  display: flex;
+  opacity: 0;  
+}
+
+.itemAction {
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 10px;  
+  margin-left: 6px;  
+  cursor: pointer;
+}
+
+.itemStyle:hover .itemActionsContainer {
+  opacity: 1;  
+}
+
+.remove {
+  background-color: rgba(255, 48, 48, 0.2);
+}
+
+.done {
+  background-color: rgba(48, 128, 48, 0.2);
+}
