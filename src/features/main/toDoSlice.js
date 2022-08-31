@@ -6,9 +6,9 @@ export const toDoSlice = createSlice({
     items: [
       { text: 'To Do #1', isDone: false },
       { text: 'To Do item #two', isDone: false },
-      { text: '3rd up on the list', isDone: false },
+      { text: '3rd up on the list', isDone: false }
     ],
-    doneItems:[],
+    doneItems:[]
   },
   reducers: {
     addItem: (state, action) => {

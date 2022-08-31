@@ -1,7 +1,8 @@
 import React from "react";
 import { ToDoItem } from "./toDoItem";
+import './toDo.css';
 
-export function ToDoItems({ items }) {
+export function ToDoItems({ mainItems }) {
 
   const toDoColors = [
     "berkelyBlue",
@@ -13,7 +14,7 @@ export function ToDoItems({ items }) {
   return (
     <div id="currentItems" className="toDoContainer">
       <ul id="itemsList">
-        {items.map(({ text, isDone }, index) => (
+        {mainItems.map(({ text, isDone }, index) => (
           <li
             key={text}
             className={`item-${getToDoColor(index)} itemStyle`}                

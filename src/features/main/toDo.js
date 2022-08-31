@@ -1,67 +1,41 @@
-import React from "react";
-// import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+// import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { ToDoItems } from "./toDoItems";
-// import { addItem } from "./toDoSlice";
+import { addItem } from "./toDoSlice";
 
 import './toDo.css';
 
-const mainToDoItems = [
-  { text: "To do #1", isDone: false },
-  { text: "To do item # two", isDone: false },
-  { text: "Just another test", isDone: false },
-];
+export const ToDo = () => {
+  const [newToDoItem, setNewToDoItem] = useState("");
+  // use "const { items } = " because only want the items property of the state.
+  // if use "const items = " will get the whole state, both items and done items properties.
+  const { items } = useSelector((state) => state.toDo); 
+  const dispatch = useDispatch();
 
-export class ToDo extends React.Component  {
-  constructor(props) {
-    super(props);
-    this.state = {
-      newToDoItem: ''
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  const onFormSubmit = (e) => {
+    e.prevetDefault();
+    if (newToDoItem === "") {
+      return;
+    }
+    dispatch(addItem(newToDoItem));
+    setNewToDoItem("");
+  };
 
-  // const [newToDoItem, setNewToDoItem] = useState("");  
-  // const { items } = useSelector((state) => state.toDo);
-  // const dispatch = useDispatch();
-
-  // const onFormSubmit = (e) => {    
-  //   e.preventDefault();
-  //   if (newToDoItem === "") {
-  //     return;
-  //   }    
-  //   dispatch(addItem(newToDoItem));    
-  //   setNewToDoItem("");
-  // }
-
-  handleChange(e) {
-    this.setState({newToDoItem: e.target.value});
-  }
-
-  handleSubmit(e) {
-    mainToDoItems.push({text: this.state.newToDoItem, isDone: false})
-    this.setState({newToDoItem: ''});
-    document.getElementById('newItemInput').value='';
-    e.preventDefault();    
-  }
-
-  render() {
-    return (    
-      <div id="mainContainer">
-        <div id="newItem" className="toDoContainer">
-          <div id="newItemTitle">New item goes here</div>
-          <form onSubmit={this.handleSubmit}>
-            <input 
-              type="text" 
-              id="newItemInput"             
-              value={this.state.value}
-              onChange={this.handleChange}
-            />            
-          </form>
-        </div>
-        <ToDoItems items={mainToDoItems}/>
-      </div>    
-    );
-  }
-};
+  return (
+    <div id="mainContainer">
+      <div id="newItem" className="toDoContainer">
+      <div id="newItemTitle">New item goes here</div>
+      <form onSubmit={onFormSubmit}>
+        <input
+          type="text"
+          id="newItemInput"
+          value={newToDoItem}
+          onChange={(e) => setNewToDoItem(e.target.value)}
+        />           
+      </form>
+      </div>
+      <ToDoItems mainItems={items} />
+    </div>
+  )
+}
