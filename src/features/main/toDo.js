@@ -14,7 +14,7 @@ export const ToDo = () => {
   const dispatch = useDispatch();
 
   const onFormSubmit = (e) => {
-    e.prevetDefault();
+    e.preventDefault();
     if (newToDoItem === "") {
       return;
     }
@@ -32,7 +32,7 @@ export const ToDo = () => {
           id="newItemInput"
           value={newToDoItem}
           onChange={(e) => setNewToDoItem(e.target.value)}
-        />           
+        />               
       </form>
       </div>
       <ToDoItems mainItems={items} />
