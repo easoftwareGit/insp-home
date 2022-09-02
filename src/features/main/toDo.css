@@ -90,3 +90,8 @@
 .done {
   background-color: rgba(48, 128, 48, 0.2);
 }
+
+/* .toDoDone needs to go last so it will override item-{color} values */
+.toDoDone {
+  background-color: rgb(145, 145, 145, 0.1);  
+}

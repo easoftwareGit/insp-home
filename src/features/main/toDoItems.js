@@ -17,7 +17,8 @@ export function ToDoItems({ mainItems }) {
         {mainItems.map(({ text, isDone }, index) => (
           <li
             key={text}
-            className={`item-${getToDoColor(index)} itemStyle`}                
+            className={`item-${getToDoColor(index)} itemStyle 
+              ${isDone ? "toDoDone" : ""}`}   
           >
             <ToDoItem id={index} isDone={isDone} />
             {text}            

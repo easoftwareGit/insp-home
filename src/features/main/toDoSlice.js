@@ -12,6 +12,10 @@ export const toDoSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
+      if (state.items.find(({ text }) => text === action.payload)) {
+        alert(`"${action.payload}" is already entered.`);
+        return;
+      }
       // action.payload has text of item to add
       state.items.push({ text: action.payload, isDone: false });
     },
