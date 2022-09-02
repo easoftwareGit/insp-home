@@ -1,0 +1,33 @@
+{
+  "success": {
+    "total": 1
+  },
+  "contents": {
+    "quotes": [
+      {
+        "quote": "I always advice people - Don't wait ! Do something when you are young, when you have no responsibilities. Invest time in yourself to have great Experiences that are going to enrich you, then you can't possibly lose.",
+        "length": "215",
+        "author": "Steve Jobs",
+        "tags": {
+          "0": "being-young",
+          "1": "experience",
+          "2": "inspire",
+          "3": "life",
+          "5": "tod"
+        },
+        "category": "inspire",
+        "language": "en",
+        "date": "2022-09-02",
+        "permalink": "https://theysaidso.com/quote/steve-jobs-i-always-advice-people-dont-wait-do-something-when-you-are-young-when",
+        "id": "b_3qh1IDOYsNDs2hg2FcHAeF",
+        "background": "https://theysaidso.com/img/qod/qod-inspire.jpg",
+        "title": "Inspiring Quote of the day"
+      }
+    ]
+  },
+  "baseurl": "https://theysaidso.com",
+  "copyright": {
+    "year": 2024,
+    "url": "https://theysaidso.com"
+  }
+}
