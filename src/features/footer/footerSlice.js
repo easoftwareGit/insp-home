@@ -1,4 +1,3 @@
-// import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import getQuoteApi from "../../api/quotes/quoteApi";
 // import { allQuotes } from "./localFooters";
